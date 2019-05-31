@@ -61,6 +61,15 @@ class Collection {
         return this.collection[this.collection.length - 1];
     }
 
+    current(){
+        if((this.index <= this.collection.length - 1) && (this.index >= 0)){
+            return this.collection[this.index];
+        }
+        else{
+            return `Object index exceeds collection range.`;
+        }
+    }
+
     next() {
         this.index++;
         this.index > this.collection.length - 1 ? this.index = 0 : this.index;
